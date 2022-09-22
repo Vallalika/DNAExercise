@@ -18,7 +18,6 @@ public class Part2Test {
     @Test
     public void canFindValidGene() {
         String validString = "ATGGGGGTTACCAATTAA";
-        //assertEquals("ATGGGGGTTACCAATTAA",testGene2.findSimpleGene(validString,startCodon, stopCodon));
         assertEquals("ATGGGGGTTACCAATTAA",testGene2.findSimpleGene(validString,startCodon,stopCodon));
     }
 
@@ -40,5 +39,17 @@ public class Part2Test {
     public void findsNoGeneIfStrandNotMultipleOfThree() {
         String noMultipleOfThree = "ATGGGGGTTACCAATAA";
         assertEquals("Invalid DNA sequence",testGene2.findSimpleGene(noMultipleOfThree,startCodon,stopCodon));
+    }
+
+    @Test
+    public void returnsUpperCaseWhenGivenUpperCase() {
+        String validStringUpperCase = "ATGGGGGTTACCAATTAA";
+        assertEquals("ATGGGGGTTACCAATTAA", testGene2.findSimpleGene(validStringUpperCase,startCodon,stopCodon));
+    }
+
+    @Test
+    public void returnsLowerCaseWhenGivenLowerCase() {
+        String validStringLowerCase = "atgggggttaccaattaa";
+        assertEquals("atgggggttaccaattaa", testGene2.findSimpleGene(validStringLowerCase,startCodon,stopCodon));
     }
 }
