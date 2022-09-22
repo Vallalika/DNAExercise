@@ -9,12 +9,6 @@ public class Part1Test {
     @Before
     public void before() {
         testGene = new Part1();
-
-
-
-
-
-//        System.out.println(testGene.findSimpleGene(noMultipleOfThree));
     }
 
     @Test
