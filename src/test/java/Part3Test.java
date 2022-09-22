@@ -1,6 +1,5 @@
 import org.junit.Before;
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
 public class Part3Test {
@@ -19,12 +18,12 @@ public class Part3Test {
     @Test
     public void canSpotTwoOccurrencesTrue() {
         stringb = "catgtatgtatg";
-        assertTrue(testGene3.twoOccurences(stringa,stringb));
+        assertTrue(testGene3.twoOccurrences(stringa,stringb));
     }
 
     @Test
-    public void canSpotTwoOccurrencesTrue() {
+    public void canSpotTwoOccurrencesFalse() {
         stringb = "catgtacgtattg";
-        assertFalse(testGene3.twoOccurences(stringa,stringb));
+        assertFalse(testGene3.twoOccurrences(stringa,stringb));
     }
 }
