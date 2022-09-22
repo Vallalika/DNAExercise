@@ -26,13 +26,15 @@ public class Part3Test {
         assertFalse(testGene3.twoOccurrences(stringa,stringb));
     }
 
+    @Test
     public void canFindSubstringaAndReturnRestOfStringb() {
         String stringb = "catgtatgtatg";
         assertEquals("tatgtatg",testGene3.lastPart(stringa,stringb));
     }
 
+    @Test
     public void canReturnStringbIfStringaNotFound() {
-        String stringb = "catgtatgtatg";
-        assertEquals("catgtatgtatg",testGene3.lastPart(stringa,stringb));
+        String stringb = "catttatctata";
+        assertEquals("catttatctata",testGene3.lastPart(stringa,stringb));
     }
 }
