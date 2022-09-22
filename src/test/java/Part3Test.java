@@ -6,7 +6,6 @@ public class Part3Test {
 
     Part3 testGene3;
     String stringa;
-    String stringb;
 
     @Before
     public void before() {
@@ -17,13 +16,23 @@ public class Part3Test {
 
     @Test
     public void canSpotTwoOccurrencesTrue() {
-        stringb = "catgtatgtatg";
+        String stringb = "catgtatgtatg";
         assertTrue(testGene3.twoOccurrences(stringa,stringb));
     }
 
     @Test
     public void canSpotTwoOccurrencesFalse() {
-        stringb = "catgtacgtattg";
+        String stringb = "catgtacgtattg";
         assertFalse(testGene3.twoOccurrences(stringa,stringb));
+    }
+
+    public void canFindSubstringaAndReturnRestOfStringb() {
+        String stringb = "catgtatgtatg";
+        assertEquals("tatgtatg",testGene3.lastPart(stringa,stringb));
+    }
+
+    public void canReturnStringbIfStringaNotFound() {
+        String stringb = "catgtatgtatg";
+        assertEquals("catgtatgtatg",testGene3.lastPart(stringa,stringb));
     }
 }
