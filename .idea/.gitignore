@@ -2,3 +2,6 @@
 /shelf/
 /workspace.xml
 jars/
+target/
+.DS_Store
+
