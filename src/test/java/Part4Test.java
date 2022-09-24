@@ -29,9 +29,9 @@ public class Part4Test {
 
     @Test
     public void canPrintFirstYTLink() {
-        String result = "http://www.YouTube.com/watch?v=sdzjcBhrgp0";
-        YTtest.findYTLinks();
-        assertEquals(result, outContent.toString().trim().substring(0,result.length()));
+        String result = "http://www.YouTube.com/watch?v=sdzjcBhrgp0&feature=youtu.be";
+        YTtest.findYTLinks("https://www.dukelearntoprogram.com//course2/data/manylinks.html");
+        assertEquals(result, outContent.toString().substring(0,result.length()+1).trim());
     }
 
     @After
